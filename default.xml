@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<manifest>
+  <remote name="aosp" fetch="https://android-review.googlesource.com/" />
+  <remote name="innersource" fetch="https://github.com/intel-innersource/" />
+
+  <default remote="aosp" revision="master" sync-j="4" sync-c="true" />
+
+
+  <project name="platform/prebuilts/build-tools" path="prebuilts/build-tools" groups="trusty" clone-depth="1" revision="b256f3f39a7e24d7084a482f43e1fac8a5148a74" />
+  <project path="prebuilts/clang-tools" name="platform/prebuilts/clang-tools" groups="trusty" clone-depth="1" />
+  <project name="platform/prebuilts/clang/host/linux-x86" path="prebuilts/clang/host/linux-x86" groups="trusty" clone-depth="1" revision="b072928f176af7db1929549c4a30e974c0b7d99d" />
+  <project name="platform/prebuilts/rust" path="prebuilts/rust" groups="trusty" clone-depth="1" dest-branch="master" revision="1a0ce84dfddff075798b1014310b7f38aa625860" upstream="master"/>
+  <project name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" groups="trusty" clone-depth="1" revision="91761804f6e3bfceaa2894681b6fe86d79fb3b4c" />
+
+  <project dest-branch="master" groups="trusty" name="platform/external/libcxx" path="external/libcxx" revision="bf9a0bcb47de1ddadca272a7227071a46d4d5fac" upstream="master" />
+  <project dest-branch="master" groups="trusty" name="platform/external/libcxxabi" path="external/libcxxabi" revision="4b96903904aa97dad7f89f97ee22920cf5a3e112" upstream="master" />
+  <project dest-branch="master" groups="trusty" name="platform/external/nanopb-c" path="external/nanopb-c" revision="d2d08a45ace70bf4e57da6b9542a7540abaf20ae" upstream="master" />
+  <project dest-branch="master" groups="trusty" name="platform/external/open-dice" path="external/open-dice" revision="48afdc1772f38624460eb52ab5c2dd1b41b2ec39" upstream="master"/>
+  <project dest-branch="master" groups="trusty" name="platform/external/libcppbor" path="external/libcppbor" revision="61d9bff9605ad2ffd877bd99a3bde414e21f01a2" upstream="master" />
+  <project dest-branch="master" groups="trusty" name="platform/external/googletest" path="external/googletest" revision="5979ba80cc9137d44409c889ca74eadd9da010a7" upstream="master" />
+
+  <project path="prebuilts/libprotobuf" name="platform/prebuilts/libprotobuf/linux" revision="10812113a483a5ea697c65e1135cb543532141b5" groups="trusty" clone-depth="1" />
+  <project dest-branch="master" groups="trusty" name="platform/system/gatekeeper" path="system/gatekeeper" revision="69aab839632f6b82f21c8345f58c2fea19d9c590" upstream="master" />
+  <project dest-branch="master" groups="trusty" name="platform/system/iot/attestation" path="system/iot/attestation" revision="1ce107c299a915d4e4022660ec9be65cb65a653c" upstream="master" />
+  <project dest-branch="master" groups="trusty" name="platform/system/keymaster" path="system/keymaster" revision="9b6c8a44ceddb4b2ac76928380d10990e1264c67" upstream="master" />
+  <project dest-branch="master" groups="trusty" name="platform/hardware/libhardware" path="hardware/libhardware" revision="2cac8b9f81b21706dd7750908248a6f5264edd61" upstream="master" />
+  <project dest-branch="master" groups="trusty" name="platform/external/boringssl" path="external/boringssl" revision="debcae10a0f90dfc83a118fc3e33faaba092c90c" upstream="master" />
+
+  <project dest-branch="master" groups="trusty" name="trusty/app/avb" path="trusty/user/app/avb" revision="a0885c98576a4cd9f94791b6fba669e8ac46c6db" upstream="master" />
+  <project dest-branch="master" groups="trusty" name="trusty/app/cast-auth" path="trusty/user/app/cast-auth" revision="89ca25e8814f5fbc8a7c755f7dd6bc98fcf37ff4" upstream="master"/>
+  <project dest-branch="master" groups="trusty" name="trusty/app/gatekeeper" path="trusty/user/app/gatekeeper" revision="d3586e84c998fba6577f203c62b5405e1ea8d96a" upstream="master" />
+  <project dest-branch="master" groups="trusty" name="trusty/app/keymaster" path="trusty/user/app/keymaster" revision="e9c75164f790a9ff4c7d19e9675a4b9ee01d77bc" upstream="master" />
+  <project dest-branch="master" groups="trusty" name="trusty/app/sample" path="trusty/user/app/sample" revision="3ebd2634275502136f9c0a2d2cdf3d260aee939a" upstream="master" />
+  <project dest-branch="master" groups="trusty" name="trusty/app/storage" path="trusty/user/app/storage" revision="4b46defaff25b7abb2be2b3c282e77ef5d2daff8" upstream="master" />
+  <project dest-branch="master" groups="trusty" name="trusty/external/headers" path="external/headers" revision="fe7222b7341192abe23982374f4fc11061255965" upstream="master" />
+  <project dest-branch="master" groups="trusty" name="trusty/external/musl" path="external/trusty/musl" revision="60773c9268e9694f6e278103cc3d8ba607a4863d" upstream="master" />
+  <project dest-branch="master" groups="trusty" name="trusty/external/trusty" path="external/trusty/bootloader" revision="a4d2e0908814b9c1d98541ebafb8795498101dcf" upstream="master" />
+  <project dest-branch="master" groups="trusty" name="trusty/lib" path="trusty/user/base" revision="87eeec1e91262f5820adeda88eea63cdc207e2d1" upstream="master" />
+  <project dest-branch="master" groups="trusty" name="trusty/lk/common" path="external/lk" revision="db6ad79995e9ae52d3deb56b3e0c993e9b3fde2b" upstream="master">
+    <copyfile src="makefile" dest="makefile" />
+  </project>
+  <project dest-branch="master" groups="trusty" name="trusty/lk/trusty" path="trusty/kernel" revision="39cf1de616624af71f8bfaba28e39f15d195e4bc" upstream="master" />
+  <project dest-branch="master" groups="trusty" name="trusty/vendor/google/aosp" revision="351ec78d132db52c02da3843c6e89a43dd8e2694">
+    <copyfile src="lk_inc.mk" dest="lk_inc.mk" />
+  </project>
+
+    <!-- BEGIN external rust crates -->
+  <!-- These crates are pinned because their trusty build files live in the trusty tree and need to be manually updated -->
+  <project path="external/rust/crates/bitflags" name="platform/external/rust/crates/bitflags" groups="trusty" revision="603997526e625fcde6764452bb866662435ca1e1" />
+  <project path="external/rust/crates/cfg-if" name="platform/external/rust/crates/cfg-if" groups="trusty" revision="3a0379aa3da7a72be33132486b87df59254d6354" />
+  <project path="external/rust/crates/ciborium" name="platform/external/rust/crates/ciborium" groups="trusty" revision="98df581ed41275602fdb43ba68e73a3754fc290c" />
+  <project path="external/rust/crates/ciborium-io" name="platform/external/rust/crates/ciborium-io" groups="trusty" revision="eaeefa649040f31d5be71b1928a6bd8c1e84fdda" />
+  <project path="external/rust/crates/ciborium-ll" name="platform/external/rust/crates/ciborium-ll" groups="trusty" revision="c1c6232a79f0111d8f82909a4b493279db8562af" />
+  <project path="external/rust/crates/coset" name="platform/external/rust/crates/coset" groups="trusty" revision="d1d62f5d6e2c494aa2d503ea68f772141d07a50e" />
+  <project path="external/rust/crates/enumn" name="platform/external/rust/crates/enumn" groups="trusty" revision="2f975df577f1413d869988c92ec5461c21479dff" />
+  <project path="external/rust/crates/foreign-types" name="platform/external/rust/crates/foreign-types" groups="trusty" revision="a063310d99662e54ee2c5338b0f1a63aebd929b5" />
+  <project path="external/rust/crates/foreign-types-shared" name="platform/external/rust/crates/foreign-types-shared" groups="trusty" revision="5233dd5f46488af99d0c3de1b13822e2771a2e24" />
+  <project path="external/rust/crates/half" name="platform/external/rust/crates/half" groups="trusty" revision="17251f84ffd605638f1e53d686324b8b768e05d4" />
+  <project path="external/rust/crates/libc" name="platform/external/rust/crates/libc" groups="trusty" revision="122e586e93a534160230dc10ae3474cf31dd8f7f" />
+  <project path="external/rust/crates/log" name="platform/external/rust/crates/log" groups="trusty" revision="d3a6baa591a726f3216df9e0cf4a8f3bb1a2f5f7" />
+  <project path="external/rust/crates/once_cell" name="platform/external/rust/crates/once_cell" groups="trusty" revision="9bb9cf9fd83b61101f25cabc6e5f5bd16515b7f5" />
+  <project path="external/rust/crates/proc-macro2" name="platform/external/rust/crates/proc-macro2" groups="trusty" revision="0dbe64a68761c53ad18a6fa505e64baf629373db" />
+  <project path="external/rust/crates/quote" name="platform/external/rust/crates/quote" groups="trusty" revision="a17b36b511c23ec39fdc5b6c6feb71e6f89dd3d2" />
+  <project path="external/rust/crates/rust-openssl" name="platform/external/rust/crates/openssl" groups="trusty" revision="6719c3a0c9e7fd29c28ed02fc05d347feb536b68" />
+  <project path="external/rust/crates/serde" name="platform/external/rust/crates/serde" groups="trusty" revision="2fd73219ce5f3464ae74ed046ba27499cd3f3c28" />
+  <project path="external/rust/crates/serde_derive" name="platform/external/rust/crates/serde_derive" groups="trusty" revision="5bd7a1932475cf8fbdfbd8003fb82e407ee7d8ac" />
+  <project path="external/rust/crates/syn" name="platform/external/rust/crates/syn" groups="trusty" revision="0f7d984f79a1ff8f5ba53dcf2acf8719ca7b7028" />
+  <project path="external/rust/crates/unicode-xid" name="platform/external/rust/crates/unicode-xid" groups="trusty" revision="b8d1a747d48fa8e08eaf73c735377081ac3f7c0b" />
+  <!-- END external rust crates -->
+</manifest>
